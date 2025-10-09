@@ -1,9 +1,55 @@
-$bgColor: #f0f0f0;
-$primaryColor: #e57a00;
-$secondaryColor: #ffffff;
+@use 'variaveis';
+@use 'hero';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgColor;
-    color: $primaryColor;
+    background-color: variaveis.$bgColor;
+    color: variaveis.$textColor;
     font-family: Arial, sans-serif;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$textColor;
+}
+
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    color: variaveis.$secondaryColor;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.title--big{
+    @include title(44px);
+}
+
+.title{
+    @include title;
+}
+
+.title--small{
+    @include title(28px);
+}   
+
+.link--text {
+    @include text;
+    color: variaveis.$secondaryColor;
+    text-decoration: underline;
 }
