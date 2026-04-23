@@ -1,6 +1,7 @@
 @use 'variaveis';
 @use 'hero';
 @use '_shows';
+@use '_plans';
 
 @font-face {
     font-family: Avenir;
@@ -24,7 +25,7 @@
 body {
     background-color: variaveis.$bgColor;
     color: variaveis.$textColor;
-    
+
 }
 
 button {
@@ -54,20 +55,36 @@ button {
     @include text(12px);
 }
 
-.title--big{
+.title--big {
     @include title(44px);
 }
 
-.title{
+.title {
     @include title;
 }
 
-.title--small{
+.title--small {
     @include title(28px);
-}   
+}
 
 .link--text {
     @include text;
     color: variaveis.$secondaryColor;
     text-decoration: underline;
+}
+
+.button--primary {
+
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$textColor;
+    background-color: variaveis.$buttonColor;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    border: none;
+
 }
