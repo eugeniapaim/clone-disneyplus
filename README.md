@@ -44,3 +44,10 @@ O projeto utiliza **Gulp** para otimizar o fluxo de desenvolvimento, incluindo:
 ---
 
 ## 📂 Estrutura do projeto
+📁 src
+├── 📁 images
+├── main.js
+📁 dist
+├── 📁 css
+├── 📁 images
+index.html
