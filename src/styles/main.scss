@@ -4,6 +4,7 @@
 @use '_plans';
 @use '_available-devices';
 @use '_faq';
+@use '_footer';
 
 @font-face {
     font-family: Avenir;
@@ -45,6 +46,10 @@ button {
     color: variaveis.$secondaryColor;
 }
 
+
+.list {
+    list-style: none;
+}
 .text--big {
     @include text(18px);
 }
