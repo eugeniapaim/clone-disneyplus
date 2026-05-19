@@ -1,7 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('[data-tab-button]');
     const questions = document.querySelectorAll('[data-faq-question]');
+    const heroSection = document.querySelector('.hero');
 
+    const alturaHero = heroSection.clientHeight;
+
+    window.addEventListener('scroll', () => {
+        const posicaoAtual = window.scrollY;
+
+        if (posicaoAtual < alturaHero) {
+            ocultaElementosDoHeader();
+        } else {
+            exibeElementosDoHeader();
+        }
+    });
+
+
+    // Seção de navegação por abas (atrações, streaming e filmes)
     buttons.forEach(button => {
         button.addEventListener('click', (event) => {
             const tabId = event.currentTarget.dataset.tabButton;
@@ -14,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
+    // Seção de perguntas frequentes (FAQ)
     for (let i = 0; i < questions.length; i++) {
         questions[i].addEventListener('click', abreFechaResposta);
     }
@@ -38,5 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
         tabContents.forEach(tab => {
             tab.classList.remove('shows_list--is-active');
         });
+    }
+
+    function ocultaElementosDoHeader() {
+        const header = document.querySelector('.header');
+        header.classList.add('header--is-hidden');
+    }
+
+    function exibeElementosDoHeader() {
+        const header = document.querySelector('.header');
+        header.classList.remove('header--is-hidden');
     }
 });
