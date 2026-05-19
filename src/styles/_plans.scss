@@ -10,11 +10,21 @@
         justify-content: space-around;
         margin-top: 50px;
 
+        @media screen and (max-width: 768px) {
+            display: block;
+            margin-top: 0px;
+        }
+
         &__itens{
         text-align: center;
+        align-items: center;
         padding: 60px 44px;
         max-width: 380px;
         width: 100%;
+
+        @media screen and (max-width: 768px) {
+                padding-top: 5vw;
+            }
 
         &:nth-child(2){
             background-image: url(../images/fundo_combo_plus.png);
@@ -27,6 +37,11 @@
 
         img{
             height: 83px;
+
+            @media screen and (max-width: 768px) {
+                height: 100%;
+                max-width: 100%;
+            }
         }
     }
 

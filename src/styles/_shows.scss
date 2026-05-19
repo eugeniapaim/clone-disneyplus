@@ -9,14 +9,27 @@
         gap: 24px;
         margin-top: 44px;
 
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
         &--is-active {
             display: grid;
+
+            @media screen and (max-width: 768px) {
+                display: block;
+                margin-bottom: 24px;
+            }
         }
 
         &_item {
             img {
                 max-width: 100%;
                 border-radius: 4px;
+
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 24px;
+            }
             }
         }
     }
@@ -25,12 +38,21 @@
         display: flex;
         justify-content: center;
 
+        @media screen and (max-width: 768px) {
+                justify-content: space-between;
+            }
+
         &_button {
             color: variaveis.$textColor;
             font-size: 20px;
             background: none;
             border: none;
             margin: 0 1vw;
+
+            @media screen and (max-width: 768px) {
+                font-size: 16px;
+                margin: 16px 8px;
+            }
 
 
             &--is-active {

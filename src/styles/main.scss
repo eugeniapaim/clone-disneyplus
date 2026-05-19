@@ -55,26 +55,52 @@ button {
 
 .text--big {
     @include text(18px);
+
+    @media screen and (max-width: 768px) {
+        @include text(15px);
+    }
 }
 
 .text {
     @include text;
+
+    @media screen and (max-width: 768px) {
+        @include text(14px);
+    }
 }
 
 .text--small {
     @include text(12px);
+
+    @media screen and (max-width: 768px) {
+        @include text(11px);
+    }
 }
 
 .title--big {
     @include title(44px);
+
+    @media screen and (max-width: 768px) {
+        @include title(26px);
+    }
 }
 
 .title {
     @include title;
+
+    @media screen and (max-width: 768px) {
+        @include title(24px);
+        padding: 24px 0px;
+    }
 }
 
 .title--small {
     @include title(28px);
+
+    @media screen and (max-width: 768px) {
+        @include title(22px);
+
+    }
 }
 
 .link--text {
@@ -123,6 +149,10 @@ button {
     gap: 40px;
     align-items: center;
 
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+
     img {
         max-width: 100%;
     }
@@ -132,6 +162,7 @@ button {
 
         h2 {
             margin-bottom: 24px;
+
         }
     }
 
@@ -153,6 +184,12 @@ button {
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            @media screen and (max-width: 768px) {
+                position: relative;
+                left: 0;
+                width: 100%;
+            }
         }
     }
 }
